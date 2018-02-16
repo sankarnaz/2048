@@ -4,6 +4,7 @@ var curArray=[0,0,0,0];
 var winPoint=2048;
 var curHigh=0;
 var isNewGame=true;
+var ifMoved=false;
 function moveNumbers()
 {
     var flagPoint=0;
@@ -42,7 +43,8 @@ function process()
 {
     moveNumbers();
     addNumbers();
-    moveNumbers();   
+    moveNumbers();
+    ifMoved=true;   
 }
 function upArrow()
 {
@@ -113,20 +115,21 @@ function doNothing(event)
 {
 if(isNewGame)
 {
-var x=event.which;
-if(x===38) upArrow();
-else if(x===37) leftArrow();
-else if(x===39) rightArrow();
-else if(x===40)  downArrow();
-if(isEmpty()) 
-{
-    fillRandom();
-}
-else 
-{
-    isNewGame=checkIfMoveAvailable();
-}
-myDisplay();
+	var x=event.which;
+	if(x===38) upArrow();
+	else if(x===37) leftArrow();
+	else if(x===39) rightArrow();
+	else if(x===40)  downArrow();
+	if(isEmpty()) 
+	{
+    		fillRandom();
+	}
+	else 	
+	{
+      		isNewGame=checkIfMoveAvailable();
+	}
+	myDisplay();
+	ifMoved=false;
 }
 }
 function checkIfMoveAvailable()
@@ -160,6 +163,7 @@ return false;
 
 function fillRandom()
 {
+if(!ifMoved) return;
 var fillNum=[2,4];
 var r=Math.floor(Math.random() * 4);
 var c=Math.floor(Math.random() * 4);
