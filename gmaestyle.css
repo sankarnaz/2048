@@ -1,0 +1,75 @@
+.myTextDiv
+    {
+    text-align: center;
+    background-color: PaleVioletRed;
+    color: white;
+    height: 100px;
+    font-size: 50px;
+    line-height: 2;
+    }
+.floating-box {
+    display: inline-block;
+    width: 100px;
+    vertical-align: top;
+    height: 100px;
+    border: 2px solid gray;   
+    text-align: center;
+line-height: -moz-block-height;
+}
+.color_0
+{
+    background-color: #f3cfec;
+}
+.color_2
+{
+    background-color: #dbffff;
+}
+.color_4
+{
+    background-color: #dbeeee;
+}
+
+.color_8
+{
+    background-color: #dbdddd;
+}
+
+.color_16
+{
+    background-color: #dbcccc;
+}
+
+.color_32
+{
+    background-color: #dbbbbb;
+}
+
+.color_64
+{
+    background-color: #dbaacc;
+}
+
+.color_128
+{
+    background-color: #db99aa;
+}
+
+.color_256
+{
+    background-color: #db8899;
+}
+
+.color_512
+{
+    background-color: #db7788;
+}
+
+.color_1024
+{
+    background-color: #db6677;
+}
+
+.color_2048
+{
+    background-color: #db5566;
+}
