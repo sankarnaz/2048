@@ -191,6 +191,10 @@ function initDisplay()
         }
         myBoard.appendChild(document.createElement('br'));
     }
+    ifMoved=true;
+    fillRandom();
+    myDisplay();
+    ifMoved=false;
     
 }
 
