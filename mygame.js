@@ -164,12 +164,13 @@ return false;
 function fillRandom()
 {
 if(!ifMoved) return;
-var fillNum=[2,4];
+var fillNum=[2,2,2,2,2,2,2,2,4,4];
 var r=Math.floor(Math.random() * 4);
 var c=Math.floor(Math.random() * 4);
+var f=Math.floor(Math.random() * 10);
 if(numberArray[r][c]===0)
 	{
-	numberArray[r][c]=fillNum[(r+c)%2];
+	numberArray[r][c]=fillNum[f];
 	return;
 	}
 fillRandom();
